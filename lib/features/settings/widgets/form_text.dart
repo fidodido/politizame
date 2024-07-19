@@ -1,4 +1,4 @@
-import '../../../widgets/primary_button.dart';
+import '../../common/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../flyer/bloc/flyer_bloc.dart';

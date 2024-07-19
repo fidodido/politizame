@@ -1,7 +1,7 @@
 import 'package:app_pcp/features/flyer/bloc/flyer_bloc.dart';
 import 'package:app_pcp/features/flyer/factory/flyer_factory.dart';
 import 'package:app_pcp/features/flyer/widgets/face/face_3.dart';
-import 'package:app_pcp/utils/app_constant.dart';
+import 'package:app_pcp/config/app_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';

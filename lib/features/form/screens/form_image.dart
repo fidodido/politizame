@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
-
-import '../../../utils/app_constant.dart';
-import '../../../utils/app_utils.dart';
-import '../../../widgets/primary_button.dart';
+import '../../../config/app_constant.dart';
+import '../../../config/app_utils.dart';
+import '../../common/widgets/primary_button.dart';
 import '../bloc/form_bloc.dart';
-import '../bloc/form_bloc_state.dart';
+import '../bloc/form_state.dart' as form;
+import '../bloc/form_state.dart';
 
 class FormImageScreen extends StatefulWidget {
   const FormImageScreen({super.key});
@@ -36,10 +36,10 @@ class FormImageScreenState extends State<FormImageScreen> {
           Text(AppConstant.appTitle)
         ]),
       ),
-      body: BlocBuilder<FormBloc, FormBlocState>(
+      body: BlocBuilder<FormBloc, form.FormState>(
         builder: (context, state) {
           final bloc = BlocProvider.of<FormBloc>(context);
-          if (state.status == FormBlocStatus.loaded) {
+          if (state.status == FormStatus.loaded) {
             return Padding(
               padding: const EdgeInsets.all(16.0),
               child: Center(
@@ -48,12 +48,12 @@ class FormImageScreenState extends State<FormImageScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Text(
-                        'Selecciona una imagen',
+                        'Select an image',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
                       ),
                       const Text(
-                        'Puedes saltar este paso si no estas seguro',
+                        'You can skip this step if you are not sure.',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
                       ),
@@ -89,7 +89,7 @@ class FormImageScreenState extends State<FormImageScreen> {
                             final bytes = await croppedFile.readAsBytes();
                             bloc.setImage(bytes);
                           },
-                          title: 'Subir imagen')
+                          title: 'Upload image')
                     ]),
               ),
             );
@@ -100,7 +100,7 @@ class FormImageScreenState extends State<FormImageScreen> {
         },
       ),
       floatingActionButton: ActionButton(
-        title: 'Siguiente',
+        title: 'Next',
         onTap: () {
           Navigator.pushNamed(context, '/editor');
         },

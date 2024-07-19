@@ -1,5 +1,6 @@
 import '../../domain/model/user.dart';
 
 abstract class SessionStorage {
-  save(User user) {}
+  Future<void> save(User user);
+  Future<bool> isSignIn();
 }

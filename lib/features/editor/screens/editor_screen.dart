@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../utils/app_constant.dart';
+import '../../../config/app_constant.dart';
 import '../../export/screens/export_screen.dart';
 import '../../flyer/bloc/flyer_bloc.dart';
 import '../../flyer/screens/circle_screen.dart';
@@ -69,15 +69,12 @@ class EditorScreenState extends State<EditorScreen> {
               width: 8,
             ),
             TextButton(
-              child: const Text('Exportar'),
+              child: const Text('Export'),
               onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (context) {
-                      return const Dialog.fullscreen(
-                        child: ExportScreen(),
-                      );
-                    });
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ExportScreen()),
+                );
               },
             ),
           ],

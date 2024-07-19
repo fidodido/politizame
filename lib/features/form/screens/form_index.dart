@@ -1,8 +1,8 @@
-import 'package:app_pcp/features/form/screens/form_image.dart';
-import '../../../utils/app_constant.dart';
-import '../../../utils/app_utils.dart';
-import '../../../widgets/primary_button.dart';
 import 'package:flutter/material.dart';
+import '../../common/widgets/primary_button.dart';
+import 'form_image.dart';
+import '../../../config/app_constant.dart';
+import '../../../config/app_utils.dart';
 
 class FormIndexScreen extends StatefulWidget {
   const FormIndexScreen({super.key});
@@ -38,7 +38,7 @@ class FormIndexScreenState extends State<FormIndexScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Nuevo diseño de campaña',
+                  'New campaign design',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 42),
                 ),
@@ -47,7 +47,7 @@ class FormIndexScreenState extends State<FormIndexScreen> {
                 ),
                 Text(
                   textAlign: TextAlign.center,
-                  'Deja que te ayudemos a crear  tu campaña electoral.',
+                  'Let us help you create your electoral campaign.',
                   style: TextStyle(fontSize: 24),
                 ),
               ]),
@@ -55,7 +55,7 @@ class FormIndexScreenState extends State<FormIndexScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: ActionButton(
-          title: 'Creemos tu campaña',
+          title: "Let's go for it",
           onTap: () => {
                 Navigator.push(
                   context,
