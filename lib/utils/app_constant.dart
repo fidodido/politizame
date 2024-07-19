@@ -1,4 +1,4 @@
-import '../data/models/palette.dart';
+import '../application/domain/model/palette.dart';
 
 class AppConstant {
   static String appTitle = 'Politízame';

@@ -69,7 +69,7 @@ class EditorScreenState extends State<EditorScreen> {
               width: 8,
             ),
             TextButton(
-              child: const Text('Nuevo'),
+              child: const Text('Exportar'),
               onPressed: () {
                 showDialog(
                     context: context,
@@ -80,18 +80,6 @@ class EditorScreenState extends State<EditorScreen> {
                     });
               },
             ),
-            TextButton(
-              child: const Text('Guardar'),
-              onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (context) {
-                      return const Dialog.fullscreen(
-                        child: ExportScreen(),
-                      );
-                    });
-              },
-            )
           ],
           bottom: TabBar(
             tabs: [

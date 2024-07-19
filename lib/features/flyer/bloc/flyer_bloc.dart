@@ -2,7 +2,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/services.dart' show Uint8List, rootBundle;
-import '../../../data/models/palette.dart';
+import '../../../application/domain/model/palette.dart';
 import '../../../utils/app_constant.dart';
 import '../../../utils/app_utils.dart';
 import '../factory/flyer_factory.dart';

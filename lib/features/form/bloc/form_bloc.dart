@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../data/models/palette.dart';
+import '../../../application/domain/model/palette.dart';
 import '../../../utils/app_constant.dart';
 import 'form_bloc_state.dart';
 

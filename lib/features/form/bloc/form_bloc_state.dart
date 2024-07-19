@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../../../data/models/palette.dart';
+import '../../../application/domain/model/palette.dart';
 
 enum FormBlocStatus { initial, loading, error, loaded }
 
